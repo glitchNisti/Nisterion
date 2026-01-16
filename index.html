@@ -58,12 +58,12 @@
                 0 0 80px #5865F2;
         }
 
-        /* Стрелка */
+        /* Стрелка вверх (указывает на текст) */
         .arrow {
             margin-top: 14px;
             font-size: 28px;
             color: white;
-            animation: bounce 1.5s infinite;
+            animation: bounceUp 1.5s infinite;
             text-shadow: 0 0 10px #5865F2;
         }
 
@@ -76,13 +76,13 @@
             text-shadow: 0 0 8px #5865F2;
         }
 
-        /* Анимация стрелки */
-        @keyframes bounce {
+        /* Анимация стрелки вверх */
+        @keyframes bounceUp {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(8px); }
+            50% { transform: translateY(-8px); }
         }
 
-        /* 📱 Адаптация под телефон */
+        /* 📱 Мобильная адаптация */
         @media (max-width: 600px) {
             .discord-icon {
                 width: 80px;
@@ -116,7 +116,7 @@
             nisterion
         </a>
 
-        <div class="arrow">↓</div>
+        <div class="arrow">↑</div>
         <div class="press">PRESS</div>
     </div>
 </body>
