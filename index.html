@@ -21,103 +21,83 @@
             text-align: center;
         }
 
-        .discord-icon {
-            width: 64px;
-            margin-bottom: 18px;
-            filter: drop-shadow(0 0 8px #5865F2);
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
+        /* Кликабельный Discord логотип */
+        .discord-link {
             display: inline-block;
-
-            font-size: 44px;
-            letter-spacing: 2px;
-
-            text-shadow:
-                0 0 5px #ffffff,
-                0 0 10px #5865F2,
-                0 0 20px #5865F2,
-                0 0 40px #5865F2;
-
-            transition:
-                transform 0.3s ease,
-                text-shadow 0.3s ease,
-                opacity 0.3s ease;
+            transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
         }
 
-        a:hover {
+        .discord-link:hover {
             transform: scale(1.25);
-            opacity: 0.9;
-
-            text-shadow:
-                0 0 10px #ffffff,
-                0 0 20px #5865F2,
-                0 0 40px #5865F2,
-                0 0 80px #5865F2;
+            opacity: 0.95;
         }
 
-        /* Стрелка вверх (указывает на текст) */
+        .discord-icon {
+            width: 90px;
+            filter:
+                drop-shadow(0 0 6px #ffffff)
+                drop-shadow(0 0 15px #5865F2)
+                drop-shadow(0 0 30px #5865F2)
+                drop-shadow(0 0 60px #5865F2);
+        }
+
+        /* Стрелка вверх */
         .arrow {
-            margin-top: 14px;
-            font-size: 28px;
+            margin-top: 18px;
+            font-size: 30px;
             color: white;
             animation: bounceUp 1.5s infinite;
-            text-shadow: 0 0 10px #5865F2;
+            text-shadow: 0 0 12px #5865F2;
         }
 
         /* PRESS */
         .press {
-            margin-top: 4px;
+            margin-top: 6px;
             font-size: 16px;
             letter-spacing: 3px;
             color: #bfc5ff;
             text-shadow: 0 0 8px #5865F2;
         }
 
-        /* Анимация стрелки вверх */
         @keyframes bounceUp {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+            50% { transform: translateY(-10px); }
         }
 
         /* 📱 Мобильная адаптация */
         @media (max-width: 600px) {
             .discord-icon {
-                width: 80px;
-            }
-
-            a {
-                font-size: 64px;
+                width: 130px;
             }
 
             .arrow {
-                font-size: 40px;
+                font-size: 44px;
             }
 
             .press {
-                font-size: 20px;
+                font-size: 22px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img
-            class="discord-icon"
-            src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg"
-            alt="Discord"
+
+        <a
+            class="discord-link"
+            href="https://discord.gg/xERF6uSK"
+            target="_blank"
         >
-
-        <br>
-
-        <a href="https://discord.gg/xERF6uSK" target="_blank">
-            nisterion
+            <img
+                class="discord-icon"
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg"
+                alt="Discord"
+            >
         </a>
 
         <div class="arrow">↑</div>
         <div class="press">PRESS</div>
+
     </div>
 </body>
 </html>
