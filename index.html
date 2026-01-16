@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nisterion</title>
 
     <style>
@@ -13,6 +14,7 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
+            user-select: none;
         }
 
         .container {
@@ -28,9 +30,10 @@
         a {
             text-decoration: none;
             color: white;
+            display: inline-block;
+
             font-size: 44px;
             letter-spacing: 2px;
-            display: inline-block;
 
             text-shadow:
                 0 0 5px #ffffff,
@@ -54,6 +57,49 @@
                 0 0 40px #5865F2,
                 0 0 80px #5865F2;
         }
+
+        /* Стрелка */
+        .arrow {
+            margin-top: 14px;
+            font-size: 28px;
+            color: white;
+            animation: bounce 1.5s infinite;
+            text-shadow: 0 0 10px #5865F2;
+        }
+
+        /* PRESS */
+        .press {
+            margin-top: 4px;
+            font-size: 16px;
+            letter-spacing: 3px;
+            color: #bfc5ff;
+            text-shadow: 0 0 8px #5865F2;
+        }
+
+        /* Анимация стрелки */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+
+        /* 📱 Адаптация под телефон */
+        @media (max-width: 600px) {
+            .discord-icon {
+                width: 80px;
+            }
+
+            a {
+                font-size: 64px;
+            }
+
+            .arrow {
+                font-size: 40px;
+            }
+
+            .press {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -63,10 +109,15 @@
             src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/discord.svg"
             alt="Discord"
         >
+
         <br>
-        <a href="https://discord.gg/wa3aGn5q" target="_blank">
+
+        <a href="https://discord.gg/xERF6uSK" target="_blank">
             nisterion
         </a>
+
+        <div class="arrow">↓</div>
+        <div class="press">PRESS</div>
     </div>
 </body>
 </html>
